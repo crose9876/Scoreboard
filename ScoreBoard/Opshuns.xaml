@@ -1,0 +1,55 @@
+﻿<UserControl x:Class="ScoreBoard.Opshuns"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ScoreBoard"
+             xmlns:Controls="clr-namespace:ScoreBoard"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Label x:Name="Title" Content="Options" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="71,10,0,0" FontSize="40"/>
+        <Label x:Name="minTitle1" Content="Change Team Name:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="31,73,0,0" FontSize="20"/>
+        <Label x:Name="minTitle2" Content="Change Player Names:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="31,163,0,0" FontSize="20"/>
+        <Label x:Name="labelA" Content="Team A:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="21,110,0,0"/>
+        <Label x:Name="labelB" Content="Team B:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="159,110,0,0"/>
+        <Label x:Name="labelA2" Content="Team A:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="21,201,0,0"/>
+        <Label x:Name="labelB2" Content="Team B:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="159,201,0,0"/>
+        <TextBox x:Name="NTA" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="Team A" VerticalAlignment="Top" Width="75" Margin="79,113,0,0"/>
+        <TextBox x:Name="NTB" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="Team B" VerticalAlignment="Top" Width="75" Margin="217,113,0,0"/>
+        <TextBox x:Name="NPA" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="New Name" VerticalAlignment="Top" Width="108" Margin="46,231,0,0"/>
+        <TextBox x:Name="NPB" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="New Name" VerticalAlignment="Top" Width="108" Margin="189,232,0,0"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="77" Margin="74,205,0,0">
+            <ComboBoxItem Name="NP1" Content="Player 1"/>
+            <ComboBoxItem Name="NP2" Content="Player 2"/>
+            <ComboBoxItem Name="NP3" Content="Player 3"/>
+            <ComboBoxItem Name="NP4" Content="Player 4"/>
+            <ComboBoxItem Name="NP5" Content="Player 5"/>
+            <ComboBoxItem Name="NP6" Content="Player 6"/>
+            <ComboBoxItem Name="NP7" Content="Player 7"/>
+            <ComboBoxItem Name="NP8" Content="Player 8"/>
+            <ComboBoxItem Name="NP9" Content="Player 9"/>
+            <ComboBoxItem Name="NP10" Content="Player 10"/>
+            <ComboBoxItem Name="NP11" Content="Player 11"/>
+            <ComboBoxItem Name="NP12" Content="Player 12"/>
+        </ComboBox>
+        <ComboBox x:Name="comboBoxB" HorizontalAlignment="Left" VerticalAlignment="Top" Width="77" Margin="211,205,0,0">
+            <ComboBoxItem Name="BNP1" Content="Player 1"/>
+            <ComboBoxItem Name="BNP2" Content="Player 2"/>
+            <ComboBoxItem Name="BNP3" Content="Player 3"/>
+            <ComboBoxItem Name="BNP4" Content="Player 4"/>
+            <ComboBoxItem Name="BNP5" Content="Player 5"/>
+            <ComboBoxItem Name="BNP6" Content="Player 6"/>
+            <ComboBoxItem Name="BNP7" Content="Player 7"/>
+            <ComboBoxItem Name="BNP8" Content="Player 8"/>
+            <ComboBoxItem Name="BNP9" Content="Player 9"/>
+            <ComboBoxItem Name="BNP10" Content="Player 10"/>
+            <ComboBoxItem Name="BNP11" Content="Player 11"/>
+            <ComboBoxItem Name="BNP12" Content="Player 12"/>
+        </ComboBox>
+        <Button x:Name="button" Content="Change" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="46,141,0,0"/>
+        <Button x:Name="button1" Content="Change" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="189,141,0,0"/>
+        <Button x:Name="button2" Content="Change" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="46,259,0,0"/>
+        <Button x:Name="button3" Content="Change" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="189,259,0,0"/>
+    </Grid>
+</UserControl>

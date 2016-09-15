@@ -1,0 +1,77 @@
+﻿<Window x:Class="ScoreBoard.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ScoreBoard"
+        mc:Ignorable="d"
+        Title="Scoreboard" Height="350" Width="525" ResizeMode="NoResize">
+    <Grid>
+        <Label x:Name="TeamA" Content="Team A" Margin="175,22,0,0" HorizontalAlignment="Left" Width="50" Height="26" VerticalAlignment="Top"/>
+        <Label x:Name="TeamB" Content="Team B" VerticalAlignment="Top" Margin="0,19,189,0" HorizontalAlignment="Right" Width="49"/>
+        <Button x:Name="options" Content="Options" VerticalAlignment="Top" Margin="0,26,35,0" Click="options_Click" HorizontalAlignment="Right" Width="75"/>
+        <Button x:Name="button" Content="Clock" HorizontalAlignment="Left" VerticalAlignment="Top" Width="43" Margin="226,142,0,0" Height="24" Click="button_Click"/>
+        <Label x:Name="too" Content="2 pt shot" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="217,171,0,0"/>
+        <Label x:Name="tree" Content="3 pt shot" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="217,202,0,0" />
+        <Label x:Name="free" Content="FT shot" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="221,233,0,0"/>
+        <Label x:Name="foulAl" Content="Fouls:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="141,111,0,0"/>
+        <TextBox x:Name="scoreB" Height="55" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" TextAlignment="Center" FontSize="40" Margin="0,44,173,0" PreviewTextInput="score_PreviewTextInput" HorizontalAlignment="Right" Width="75"/>
+        <TextBox x:Name="scoreA" TextWrapping="Wrap" Text="0" TextAlignment="Center" FontSize="40" Margin="162,46,0,0" PreviewTextInput="score_PreviewTextInput" HorizontalAlignment="Left" Width="75" Height="55" VerticalAlignment="Top"/>
+        <TextBox x:Name="gtime" HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" Text="20:00" VerticalAlignment="Top" FontSize="20" Margin="221,104,0,0" Width="62"/>
+        <Label x:Name="foulBl" Content="Fouls:" VerticalAlignment="Top" Margin="0,111,173,0" HorizontalAlignment="Right" Width="40"/>
+        <Button x:Name="teamA2" Content="+" HorizontalAlignment="Left" VerticalAlignment="Top" Width="24" Margin="188,175,0,0" Click="teamA2_Click"/>
+        <Button x:Name="teamA3" Content="+" HorizontalAlignment="Left" VerticalAlignment="Top" Width="24" Margin="188,208,0,0" Click="teamA3_Click"/>
+        <Button x:Name="teamAFT" Content="+" HorizontalAlignment="Left" VerticalAlignment="Top" Width="24" Margin="188,241,0,0" Click="teamAFT_Click"/>
+        <Button x:Name="teamB2" Content="+" VerticalAlignment="Top" Margin="0,175,214,0" Click="teamB2_Click" HorizontalAlignment="Right" Width="24"/>
+        <Button x:Name="teamB3" Content="+" VerticalAlignment="Top" Margin="0,208,214,0" Click="teamB3_Click" HorizontalAlignment="Right" Width="24"/>
+        <Button x:Name="teamBFT" Content="+" VerticalAlignment="Top" Margin="0,241,214,0" Click="teamBFT_Click" HorizontalAlignment="Right" Width="24"/>
+        <TextBox x:Name="foulsA" HorizontalAlignment="Left" Height="23"  TextWrapping="Wrap" Text="0" TextAlignment="Center" VerticalAlignment="Top" Width="24" Margin="181,113,0,0"/>
+        <TextBox x:Name="foulsB" Height="23" TextWrapping="Wrap" Text="0" TextAlignment="Center" VerticalAlignment="Top" Margin="0,113,144,0" RenderTransformOrigin="0.333,0.507" HorizontalAlignment="Right" Width="24"/>
+        <RadioButton x:Name="First" Content="1st Half" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="26,0,0,275" IsChecked="True"/>
+        <RadioButton x:Name="Second" Content="2nd Half" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="26,0,0,254"/>
+        <RadioButton x:Name="Overtime" Content="Overtime" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="26,0,0,233"/>
+        <Label x:Name="Period" Content="Period" HorizontalAlignment="Left" Margin="26,3,0,0" Height="26" VerticalAlignment="Top"/>
+        <ComboBox x:Name="TeamAPlayers" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="10,111,0,0" DropDownClosed="TeamAPlayers_DropDownClosed" DropDownOpened="TeamAPlayers_DropDownOpened">
+            <ComboBoxItem Name="APlayer1" Content="Zane Young"></ComboBoxItem>
+            <ComboBoxItem Name="APlayer2" Content="Garland Hickerson"></ComboBoxItem>
+            <ComboBoxItem Name="APlayer3" Content="Mark Grigsby"></ComboBoxItem>
+            <ComboBoxItem Name="APlayer4" Content="William Oates"></ComboBoxItem>
+            <ComboBoxItem Name="APlayer5" Content="Kevin Maxwell"></ComboBoxItem>
+            <ComboBoxItem Name="APlayer6" Content="Gerald Haywood"></ComboBoxItem>
+            <ComboBoxItem Name="APlayer7" Content="Erid Seidman"></ComboBoxItem>
+            <ComboBoxItem Name="APlayer8" Content="Michael Henderson"></ComboBoxItem>
+            <ComboBoxItem Name="APlayer9" Content="Guillermo Pass"></ComboBoxItem>
+            <ComboBoxItem Name="APlayer10" Content="Mark Davis"></ComboBoxItem>
+            <ComboBoxItem Name="APlayer11" Content="Ryan Tillman"></ComboBoxItem>
+            <ComboBoxItem Name="APlayer12" Content="Aaron Otis"></ComboBoxItem>
+        </ComboBox>
+        <ComboBox x:Name="TeamBPlayers" VerticalAlignment="Top" Margin="0,111,10,0" DropDownClosed="TeamBPlayers_DropDownClosed" DropDownOpened="TeamBPlayers_DropDownOpened" HorizontalAlignment="Right" Width="120">
+            <ComboBoxItem Name="BPlayer1" Content="Bobby Mendoza"></ComboBoxItem>
+            <ComboBoxItem Name="BPlayer2" Content="Marc Patterson"></ComboBoxItem>
+            <ComboBoxItem Name="BPlayer3" Content="Charles Lawrence"></ComboBoxItem>
+            <ComboBoxItem Name="BPlayer4" Content="William Mullen"></ComboBoxItem>
+            <ComboBoxItem Name="BPlayer5" Content="Jason Salmon"></ComboBoxItem>
+            <ComboBoxItem Name="BPlayer6" Content="Richard Rodriguez"></ComboBoxItem>
+            <ComboBoxItem Name="BPlayer7" Content="John Johnson"></ComboBoxItem>
+            <ComboBoxItem Name="BPlayer8" Content="David Ferguson"></ComboBoxItem>
+            <ComboBoxItem Name="BPlayer9" Content="Ryan Leiter"></ComboBoxItem>
+            <ComboBoxItem Name="BPlayer10" Content="Alan Riddick"></ComboBoxItem>
+            <ComboBoxItem Name="BPlayer11" Content="Jason Peters"></ComboBoxItem>
+            <ComboBoxItem Name="BPlayer12" Content="Jeffrey Riddle"></ComboBoxItem>
+        </ComboBox>
+        <Label x:Name="label" Content="Players:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,87,0,0"/>
+        <Label x:Name="label1" Content="Players:" VerticalAlignment="Top" Margin="0,87,89,0" HorizontalAlignment="Right" Width="50"/>
+        <Label x:Name="label2" Content="Points:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,153,0,0"/>
+        <Label x:Name="label3" Content="Rebounds:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,184,0,0"/>
+        <Label x:Name="label4" Content="Assists:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,215,0,0"/>
+        <Label x:Name="label5" Content="Points:" VerticalAlignment="Top" Margin="0,153,85,0" HorizontalAlignment="Right" Width="45"/>
+        <Label x:Name="label6" Content="Rebounds:" VerticalAlignment="Top" Margin="0,184,64,0" HorizontalAlignment="Right" Width="66"/>
+        <Label x:Name="label7" Content="Assists:" VerticalAlignment="Top" Margin="0,215,82,0" HorizontalAlignment="Right" Width="48"/>
+        <TextBox x:Name="pointsPA" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" TextAlignment="Center" Text="0" VerticalAlignment="Top" Width="24" Margin="60,153,0,0" PreviewTextInput="score_PreviewTextInput"/>
+        <TextBox x:Name="rebsPA" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" TextAlignment="Center" Text="0" VerticalAlignment="Top" Width="24" Margin="81,184,0,0" PreviewTextInput="score_PreviewTextInput"/>
+        <TextBox x:Name="astsPA" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" TextAlignment="Center" Text="0" VerticalAlignment="Top" Width="24" Margin="60,215,0,0" PreviewTextInput="score_PreviewTextInput"/>
+        <TextBox x:Name="pointsPB" Height="23" TextWrapping="Wrap" TextAlignment="Center" Text="0" VerticalAlignment="Top" Margin="0,153,56,0" HorizontalAlignment="Right" Width="24" PreviewTextInput="score_PreviewTextInput"/>
+        <TextBox x:Name="rebsPB" Height="23" TextWrapping="Wrap" TextAlignment="Center" Text="0" VerticalAlignment="Top" Margin="0,184,35,0" HorizontalAlignment="Right" Width="24" PreviewTextInput="score_PreviewTextInput"/>
+        <TextBox x:Name="astsPB" Height="23" TextWrapping="Wrap" TextAlignment="Center" Text="0" VerticalAlignment="Top" Margin="0,215,56,0" HorizontalAlignment="Right" Width="24" PreviewTextInput="score_PreviewTextInput"/>
+    </Grid>
+</Window>
